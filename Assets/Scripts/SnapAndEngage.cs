@@ -5,8 +5,8 @@ using UnityEngine.Events;
 public class SnapAndEngage : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private FlowController flowController;   
-    [SerializeField] private HandleRotateTween handleTween;    
+    [SerializeField] private FlowController flowController;    
+    [SerializeField] private HandleRotateTween handleTween;   
 
     [Header("Behavior Flags")]
     [Tooltip("Turn flow OFF when handle locks.")]
@@ -36,11 +36,11 @@ public class SnapAndEngage : MonoBehaviour
 
     void Awake()
     {
-        
+       
         if (!flowController) flowController = FindObjectOfType<FlowController>();
         if (!handleTween) handleTween = GetComponentInChildren<HandleRotateTween>();
 
-       
+        
         if (handleTween)
         {
             handleTween.onLocked.AddListener(HandleLocked);
@@ -48,7 +48,7 @@ public class SnapAndEngage : MonoBehaviour
         }
     }
 
-    
+  
     public void OnAligned()
     {
         aligned = true;
@@ -87,7 +87,7 @@ public class SnapAndEngage : MonoBehaviour
         Log("Reset: aligned=false, unlocked immediate");
     }
 
-    
+   
     void HandleLocked()
     {
         onLocked?.Invoke();
@@ -120,7 +120,7 @@ public class SnapAndEngage : MonoBehaviour
         }
     }
 
-    
+  
     void TryStartFlowIfEligible()
     {
         if (!flowController || flowController.IsFlowing) return;

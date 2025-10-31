@@ -69,7 +69,7 @@ public class DragAlign : MonoBehaviour
             Vector3 newPos = hit.point;
             transform.position = Vector3.Lerp(transform.position, newPos, Time.deltaTime * moveSpeed);
 
-          
+            
             if (target && Vector3.Distance(transform.position, target.position) <= snapDistance)
                 StartCoroutine(SnapToTarget());
         }
@@ -92,7 +92,7 @@ public class DragAlign : MonoBehaviour
         }
 
         transform.position = end;
-        
+       
         if (snapManager) snapManager.OnAligned();
         isSnapping = false;
     }

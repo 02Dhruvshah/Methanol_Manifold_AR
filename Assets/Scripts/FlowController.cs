@@ -9,7 +9,7 @@ public class FlowController : MonoBehaviour
     [SerializeField] private GameObject cutawayPanel; 
 
     [Header("Boot Behavior")]
-    [SerializeField] private bool startFlowOnBoot = false;
+    [SerializeField] private bool startFlowOnBoot = false; 
 
     [Header("Debug")][SerializeField] private bool enableDebugLogs = false;
 

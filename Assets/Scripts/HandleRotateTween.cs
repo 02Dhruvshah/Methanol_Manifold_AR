@@ -8,7 +8,7 @@ public class HandleRotateTween : MonoBehaviour
     public enum Axis { X, Y, Z }
 
     [Header("Rotation")]
-    public Axis axis = Axis.Z;          
+    public Axis axis = Axis.Z;         
     public float lockedAngle = 90f;     
     public float rotateDuration = 0.4f;
     public Ease ease = Ease.OutCubic;
