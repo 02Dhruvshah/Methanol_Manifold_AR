@@ -151,10 +151,8 @@ After you Sucessfully Link the Female part to the Male part it **Locks** into pl
 ---
 
 ## 🧾 Deliverables
-- **APK Build:** 
-- **GitHub Repository:** [This repo link]  
-- **Development Approach Document:** Included in submission folder.  
-- **Demo Video:** 
+- **APK Build:** https://drive.google.com/file/d/1ru72YG7EaE2qwarJvxAvn_BK8TiJ_E5I/view?usp=sharing
+- **Demo Video:** https://drive.google.com/file/d/1nBzmhtSKibfBZW71OpvkQhgzRcGaJ2o5/view?usp=sharing
 
 ---
 
