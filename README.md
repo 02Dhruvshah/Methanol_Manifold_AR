@@ -101,6 +101,21 @@ Utility class to standardize touch and mouse input between Editor and mobile bui
 
 ## 🧱 Scene Setup Overview
 
+![Initial Scene - Steam Flowing](readme_assets/image1.png)
+
+
+Initially after the App opens the Manifold will be decoupled and Steam/Water will be flowing with the handle **Unlocked**.
+
+
+![Dragging Female Coupling](readme_assets/image2.png)
+
+You can move the Female Coupling part by **Touching and Dragging** the part to the Male Coupling Part.
+
+
+![Coupling Engaged – Flow Stopped](readme_assets/image3.png)
+
+
+After you Sucessfully Link the Female part to the Male part it **Locks** into place and the **Handle Rotates** and Steam/Water Stops Leaking.
 
 ---
 
@@ -128,13 +143,18 @@ Utility class to standardize touch and mouse input between Editor and mobile bui
 - Works best on Android devices that support **ARCore**.  
 - Build tested on Unity 6000.0.47f1 with Android SDK 34.  
 
+
+## Future Additions 
+
+- Ui Element to tell users to drag the correct part.
+- Ability to pinch and zoom as well as rotate the model.
 ---
 
 ## 🧾 Deliverables
-- **APK Build:** [Add your Drive link here]  
+- **APK Build:** 
 - **GitHub Repository:** [This repo link]  
 - **Development Approach Document:** Included in submission folder.  
-- **Demo Video:** [Add video link if available]
+- **Demo Video:** 
 
 ---
 
