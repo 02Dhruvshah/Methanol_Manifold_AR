@@ -1,4 +1,4 @@
-// HandleRotateTween.cs
+
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.Events;
@@ -8,8 +8,8 @@ public class HandleRotateTween : MonoBehaviour
     public enum Axis { X, Y, Z }
 
     [Header("Rotation")]
-    public Axis axis = Axis.Z;          // set the correct local axis
-    public float lockedAngle = 90f;     // degrees relative to initial local rotation
+    public Axis axis = Axis.Z;          
+    public float lockedAngle = 90f;     
     public float rotateDuration = 0.4f;
     public Ease ease = Ease.OutCubic;
 

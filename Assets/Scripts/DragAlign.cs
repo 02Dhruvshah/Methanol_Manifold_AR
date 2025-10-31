@@ -11,9 +11,9 @@ public class DragAlign : MonoBehaviour
     public SnapAndEngage snapManager;
 
     [Header("Tuning")]
-    public float snapDistance = 0.05f;     // meters
-    public float moveSpeed = 6f;           // drag lerp speed
-    public float snapEaseSpeed = 6f;       // ease-in when snapping
+    public float snapDistance = 0.05f;    
+    public float moveSpeed = 6f;           
+    public float snapEaseSpeed = 6f;       
 
     private bool isDragging = false;
     private bool isSnapping = false;
@@ -69,7 +69,7 @@ public class DragAlign : MonoBehaviour
             Vector3 newPos = hit.point;
             transform.position = Vector3.Lerp(transform.position, newPos, Time.deltaTime * moveSpeed);
 
-            // Snap check
+          
             if (target && Vector3.Distance(transform.position, target.position) <= snapDistance)
                 StartCoroutine(SnapToTarget());
         }
@@ -92,7 +92,7 @@ public class DragAlign : MonoBehaviour
         }
 
         transform.position = end;
-        // Notify engagement manager directly (replaces SendMessage)
+        
         if (snapManager) snapManager.OnAligned();
         isSnapping = false;
     }

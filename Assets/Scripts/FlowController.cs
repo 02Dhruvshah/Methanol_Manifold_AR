@@ -1,7 +1,4 @@
-// ================================
-// File: FlowController.cs
-// Restored, minimal, and stable. Drives particles, audio, and UI cutaway panel.
-// ================================
+
 using UnityEngine;
 
 public class FlowController : MonoBehaviour
@@ -9,10 +6,10 @@ public class FlowController : MonoBehaviour
     [Header("Effects")]
     [SerializeField] private ParticleSystem[] particleSystems;
     [SerializeField] private AudioSource[] audioSources;
-    [SerializeField] private GameObject cutawayPanel; // optional UI / mesh to show while flowing
+    [SerializeField] private GameObject cutawayPanel; 
 
     [Header("Boot Behavior")]
-    [SerializeField] private bool startFlowOnBoot = false; // set true if you want auto start
+    [SerializeField] private bool startFlowOnBoot = false;
 
     [Header("Debug")][SerializeField] private bool enableDebugLogs = false;
 
@@ -20,13 +17,13 @@ public class FlowController : MonoBehaviour
 
     void Awake()
     {
-        // Ensure effects are not auto-played by their own settings
+        
         if (particleSystems != null)
         {
             foreach (var ps in particleSystems)
             {
                 if (ps == null) continue;
-                var m = ps.main; m.playOnAwake = false; // prevent auto play
+                var m = ps.main; m.playOnAwake = false; 
                 ps.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
             }
         }

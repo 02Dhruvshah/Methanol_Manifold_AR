@@ -1,12 +1,12 @@
-// SnapAndEngage.cs
+
 using UnityEngine;
 using UnityEngine.Events;
 
 public class SnapAndEngage : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private FlowController flowController;    // assign in Inspector
-    [SerializeField] private HandleRotateTween handleTween;    // assign the handle object with HandleRotateTween
+    [SerializeField] private FlowController flowController;   
+    [SerializeField] private HandleRotateTween handleTween;    
 
     [Header("Behavior Flags")]
     [Tooltip("Turn flow OFF when handle locks.")]
@@ -36,11 +36,11 @@ public class SnapAndEngage : MonoBehaviour
 
     void Awake()
     {
-        // Best-effort auto-find
+        
         if (!flowController) flowController = FindObjectOfType<FlowController>();
         if (!handleTween) handleTween = GetComponentInChildren<HandleRotateTween>();
 
-        // Auto-subscribe to handle events so you don't have to wire them
+       
         if (handleTween)
         {
             handleTween.onLocked.AddListener(HandleLocked);
@@ -48,7 +48,7 @@ public class SnapAndEngage : MonoBehaviour
         }
     }
 
-    // ---- Public hooks you call from other systems/UI ----
+    
     public void OnAligned()
     {
         aligned = true;
@@ -63,7 +63,7 @@ public class SnapAndEngage : MonoBehaviour
 
         if (autoLockOnAlign && handleTween && !handleTween.IsLocked)
         {
-            handleTween.RotateToLock();   // rotation will call HandleLocked() on complete
+            handleTween.RotateToLock();  
             return;
         }
 
@@ -87,7 +87,7 @@ public class SnapAndEngage : MonoBehaviour
         Log("Reset: aligned=false, unlocked immediate");
     }
 
-    // ---- Handle events (from tween) ----
+    
     void HandleLocked()
     {
         onLocked?.Invoke();
@@ -120,11 +120,11 @@ public class SnapAndEngage : MonoBehaviour
         }
     }
 
-    // ---- Flow gating ----
+    
     void TryStartFlowIfEligible()
     {
         if (!flowController || flowController.IsFlowing) return;
-        if (stopFlowOnLock) return; // locked means OFF in your spec
+        if (stopFlowOnLock) return; 
 
         if (startFlowWhenAlignedAndLocked && aligned && handleTween && handleTween.IsLocked)
         {
